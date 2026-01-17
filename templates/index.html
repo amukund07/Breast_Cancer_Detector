@@ -4,188 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breast Cancer Detector</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Breast Cancer Risk Screening</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <section>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/index">Breast Cancer Detector</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Resources
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/awareness">Awareness & Prevention</a></li>
-                <li><a class="dropdown-item" href="/measurements">How to Take Measurements</a></li>
-                <li><a class="dropdown-item" href="/about">About Project</a></li>
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand" href="/">Breast Cancer Detector</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/predict">Check Risk</a></li>
+                <li class="nav-item"><a class="nav-link" href="/symptoms">Symptoms</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/awareness">Awareness</a></li>
+                        <li><a class="dropdown-item" href="/measurement">Measurements</a></li>
+                        <li><a class="dropdown-item" href="/about">About</a></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/symptoms">Learn Symptoms</a>
-            </li>
+        </div>
+    </nav>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/predict">Check Risk</a>
-            </li>
-        </ul>
-    </section>
 
-    <section id="info">
-        <h1>Early Awareness Saves Lives</h1>
-        <p>
-            A breast cancer awareness and risk screening platform to help you take informed steps — privately and
-            responsibly.
-        </p>
-        <a href="/predict">Check Risk</a>
-        <a href="/symptoms">Learn Symptom</a>
-    </section>
-    <br>
-    <section id="disclaimer">
-        <p>
+    <!-- HERO -->
+    <div class="container my-5">
+        <section id="info" class="text-center">
+            <h1 class="fw-bold">Early Awareness Saves Lives</h1>
+            <p class="mt-3">
+                A breast cancer awareness and risk screening platform to help you take
+                informed steps — privately and responsibly.
+            </p>
+            <a href="/predict" class="btn btn-danger me-2">Check Risk</a>
+            <a href="/symptoms" class="btn btn-outline-secondary">Learn Symptoms</a>
+        </section>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="container">
+        <section id="disclaimer" class="alert alert-warning text-center" role="alert">
             ⚠️ This tool does NOT provide medical diagnosis.
             It is designed for awareness and early risk screening only.
             Always consult a qualified medical professional.
-        </p>
-    </section>
-    <br>
-    <section>
-        <h2>The Data Behind the Prediction</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Awareness</h3>
-                <p>Learn about breast cancer symptoms, risk factors, and prevention.</p>
+        </section>
+    </div>
+
+    <!-- DATA SECTION -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">The Data Behind the Prediction</h2>
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-3">
+                    <h5>Awareness</h5>
+                    <p>Learn about breast cancer symptoms, risk factors, and prevention.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Risk Screening</h3>
-                <p>Use a machine learning model trained on medical data to assess risk based on measurements.</p>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-3">
+                    <h5>Risk Screening</h5>
+                    <p>Machine learning model trained on clinical data evaluates risk patterns.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Guidance</h3>
-                <p>Understand when it’s important to consult a doctor.</p>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-3">
+                    <h5>Guidance</h5>
+                    <p>Helps users understand when professional consultation is important.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>🎯 Our Objective</h3>
-                <p>To provide awareness and early risk indication using data-driven insights,
-                    helping individuals make informed decisions and encouraging timely medical consultation. </p>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-3">
+                    <h5>🎯 Our Objective</h5>
+                    <p>
+                        To provide early risk indication using data-driven insights,
+                        encouraging timely medical consultation.
+                    </p>
+                </div>
             </div>
+
         </div>
-    </section>
-    <br>
-    <section id="importance">
-        <h2>Why Early Detection Matters</h2>
-        <p>
-            Detecting potential risks early significantly improves treatment outcomes.
-            Awareness and timely consultation can save lives.
-        </p>
-    </section>
-    <br>
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>1️⃣ Enter Measurements</h3>
-                <p>
-                    Provide medical measurements from your imaging or lab report.
-                </p>
+    </div>
+
+    <!-- WHY IT MATTERS -->
+    <div class="container my-5">
+        <section id="importance" class="text-center">
+            <h2>Why Early Detection Matters</h2>
+            <p class="mt-2">
+                Detecting potential risks early significantly improves treatment outcomes.
+                Awareness and timely consultation can save lives.
+            </p>
+        </section>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">How It Works</h2>
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>1️⃣ Enter Measurements</h5>
+                    <p>Provide values from medical imaging or clinical reports.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>2️⃣ Data Analysis</h3>
-                <p>
-                    A trained machine learning model analyzes the data securely.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>2️⃣ Data Analysis</h5>
+                    <p>A trained machine learning model analyzes the inputs.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>3️⃣ Risk Assessment</h3>
-                <p>
-                    The system estimates potential risk with confidence.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>3️⃣ Risk Assessment</h5>
+                    <p>The system estimates risk probability with confidence.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>4️⃣ Next Steps</h3>
-                <p>
-                    You receive guidance on whether medical consultation is recommended.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>4️⃣ Next Steps</h5>
+                    <p>Guidance is provided on whether medical consultation is advised.</p>
+                </div>
             </div>
+
         </div>
-    </section>
+    </div>
 
-    <section id="who-should-use">
-        <h2>Who Should Use This Tool?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🧍 Individuals Seeking Awareness</h3>
-                <p>
-                    Anyone who wants to understand breast cancer risks and symptoms
-                    in a private and educational manner.
-                </p>
+    <!-- WHO SHOULD USE -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Who Should Use This Tool?</h2>
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>🧍 Individuals Seeking Awareness</h5>
+                    <p>People who want to learn privately and responsibly.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>📄 Those With Medical Reports</h3>
-                <p>
-                    Users who already have measurements from medical tests
-                    and want an additional data-based perspective.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>📄 With Medical Reports</h5>
+                    <p>Users with clinical measurements seeking additional insight.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🤍 People Feeling Unsure or Anxious</h3>
-                <p>
-                    If you are concerned but not yet ready to visit a doctor,
-                    this tool can help you take the first informed step.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>🤍 Feeling Unsure</h5>
+                    <p>Those anxious but not yet ready for consultation.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🎓 Students & Learners</h3>
-                <p>
-                    Ideal for educational purposes to understand how data and
-                    machine learning can support healthcare awareness.
-                </p>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-3 h-100">
+                    <h5>🎓 Students & Learners</h5>
+                    <p>Educational understanding of AI in healthcare.</p>
+                </div>
             </div>
+
         </div>
-    </section>
-    <section id="who-should-not-use">
-        <h2>Who Should Not Rely Solely on This Tool?</h2>
-        <p>
-            This platform is not intended for medical diagnosis, emergency situations,
-            or treatment decisions. If you have severe symptoms, pain, or confirmed
-            medical concerns, please consult a qualified healthcare professional immediately.
-        </p>
-    </section>
+    </div>
 
-
-    <section id="cta">
+    <!-- CTA -->
+    <div class="container text-center my-5">
         <h2>Take the First Step</h2>
-        <a href="/predict">Check Risk Now</a>
-    </section>
-    <br>
-    <section>
-        <a href="/symptoms">Learn Symptom</a>
-        <a href="/measurements">How to Take Measurements</a>
-    </section>
-    <section id="support">
-        <p>
-            You are not alone. Early awareness and timely medical care can make a difference.
-        </p>
-    </section>
+        <a href="/predict" class="btn btn-danger mt-3">Check Risk Now</a>
+    </div>
 
-    <footer>
-        <p>
-            Educational purpose only. Not a medical diagnosis or treatment tool.
-        </p>
-        <p>
-            Built with care by students | Open Source Project
-        </p>
+    <div class="container text-center my-5">
+        <a href="/symptoms" class="btn btn-outline-secondary">Learn Symptoms</a>
+        <a href="/measurement" class="btn btn-outline-secondary">How to take Measurement</a>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-center py-3">
+        <p class="mb-1">Educational purpose only. Not a medical diagnosis or treatment tool.</p>
+        <p class="mb-0">Built with care by students | Open Source Project</p>
     </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
